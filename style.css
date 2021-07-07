@@ -77,15 +77,15 @@ button:active {
   box-shadow: 0 0.1rem 0.2rem rgba(200, 200, 200, 0.65);
 }
 
-.facebook-button:hover {
-  color: #3b5998;
+.twitter-button:hover {
+  color: #1da1f2;
 }
 
 /* loader */
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #2c414e;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite; /* Safari */

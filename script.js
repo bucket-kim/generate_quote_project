@@ -2,7 +2,7 @@
 const quoteContainer = document.getElementById("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
-const facebookBtn = document.getElementById("facebook");
+const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
 // Get Quotes from API
@@ -20,6 +20,12 @@ const newQuote = () => {
     authorText.textContent = `- ${quote.author}`;
   }
 
+  if (quote.text.length > 100) {
+    quoteText.classList.add("long-quote");
+  } else {
+    quoteText.classList.remove("long-quote");
+  }
+
   quoteText.textContent = quote.text;
 };
 
@@ -34,6 +40,17 @@ const getQuotes = async () => {
     console.log(err);
   }
 };
+
+// tweet quote
+const tweet = () => {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} ${authorText.textContent}`;
+  window.open(twitterUrl, "_blank");
+};
+
+// event listener
+newQuoteBtn.addEventListener("click", newQuote);
+
+twitterBtn.addEventListener("click", tweet);
 
 // on load
 getQuotes();
