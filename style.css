@@ -15,5 +15,90 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   min-height: 100vh;
+}
+
+.quote-container {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 2.75rem;
+  font-weight: 400;
+}
+
+.long-quote {
+  font-size: 2rem;
+}
+
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.quote-author {
+  margin-top: 32px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem 0.25rem rgba(121, 121, 121, 0.65);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(150%);
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem 0.2rem rgba(200, 200, 200, 0.65);
+}
+
+.facebook-button:hover {
+  color: #3b5998;
+}
+
+/* loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* media query: tablet or phone */
+@media screen and (max-width: 1000px) {
+  .quote-container {
+    margin: auto 12px;
+  }
+
+  .quote-text {
+    font-size: 2.25rem;
+  }
 }
