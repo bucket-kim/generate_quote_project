@@ -83,13 +83,21 @@ button:active {
 
 /* loader */
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 16px solid white; /* Light grey */
+  border-top: 16px solid #1c9cef; /* Blue */
   border-radius: 50%;
-  border-top: 16px solid #2c414e;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* media query: tablet or phone */
